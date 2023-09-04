@@ -5,6 +5,8 @@ import { SplashScreen, Stack } from 'expo-router';
 import { useEffect } from 'react';
 import { useColorScheme } from 'react-native';
 
+import LikedProvider from '../contexts/liked'
+
 export {
   // Catch any errors thrown by the Layout component.
   ErrorBoundary,
@@ -20,8 +22,14 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-    ...FontAwesome.font,
+    DMBold: require('../assets/fonts/DMSans-Bold.ttf'),
+    DMMedium: require('../assets/fonts/DMSans-Medium.ttf'),
+    DMRegular: require('../assets/fonts/DMSans-Regular.ttf'),
+    MSSemiBold: require('../assets/fonts/Montserrat-SemiBold.ttf'),
+    MSBold: require('../assets/fonts/Montserrat-Bold.ttf'),
+    MSRegular: require('../assets/fonts/Montserrat-Regular.ttf'),
+    MSLight: require('../assets/fonts/Montserrat-Light.ttf'),
+    MSExtraBold: require('../assets/fonts/Montserrat-ExtraBold.ttf')
   });
 
   // Expo Router uses Error Boundaries to catch errors in the navigation tree.
@@ -47,10 +55,12 @@ function RootLayoutNav() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
-      </Stack>
+      <LikedProvider>
+        <Stack>
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="modal" options={{ presentation: 'modal', headerShown: false }} />
+        </Stack>
+      </LikedProvider>
     </ThemeProvider>
   );
 }
