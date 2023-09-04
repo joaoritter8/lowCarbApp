@@ -47,8 +47,8 @@ export default function TabOneScreen() {
         />
 
         <Recomandations
-          label={"Max 15 minutes"}
-          categories={'15-minute-meals'}
+          label={"Beverages"}
+          categories={'beverages'}
         />
 
         <View style={{ height: 50 }} />
