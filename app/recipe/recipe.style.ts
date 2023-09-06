@@ -1,6 +1,6 @@
-import { StyleSheet, useColorScheme } from "react-native";
+import { StyleSheet } from "react-native";
 
-import { COLORS, FONT, SHADOWS, SIZES, THEME } from "../../constants";
+import { COLORS, FONT } from "../../constants";
 
 const styles = StyleSheet.create({
     container: {
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
 
     },
     gestureContainer: {
-        height: 40,
+        height: 30,
         width: 200,
         justifyContent: 'center',
         alignItems: 'center'

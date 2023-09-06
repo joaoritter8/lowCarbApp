@@ -3,10 +3,9 @@ import { StyleSheet } from "react-native";
 import { COLORS, FONT, SHADOWS, SIZES } from "../../../constants";
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  container: { 
     height: 60,
-    width: 221,
+    width: 170,
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
@@ -15,7 +14,7 @@ const styles = StyleSheet.create({
   },
   containerCancel: {
     height: 60,
-    width: 158,
+    width: 170,
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",

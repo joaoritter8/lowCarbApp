@@ -25,7 +25,7 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        tabBarStyle: { backgroundColor: colorScheme === 'light' ? COLORS.white : COLORS.blackLight, height: 90 }
+        tabBarStyle: { backgroundColor: colorScheme === 'light' ? COLORS.white : COLORS.blackLight, height: 90, zIndex:0 }
       }}>
       <Tabs.Screen
         name="index"
@@ -33,12 +33,12 @@ export default function TabLayout() {
           title: 'Feed',
           headerShown: false,
           tabBarLabel(props: { focused: boolean, children: string }) {
-            return <Text style={{ color: props.focused ? (colorScheme === 'light' ? COLORS.greenDark : COLORS.grayDark) : (colorScheme == 'light' ? COLORS.white : COLORS.blackLight), fontFamily: FONT.medium }}>{props.children}</Text>
+            return <Text style={{ color: props.focused ? (colorScheme === 'light' ? COLORS.greenDark : COLORS.lightWhite) : (colorScheme == 'light' ? COLORS.white : COLORS.blackLight), fontFamily: FONT.medium }}>{props.children}</Text>
           },
           tabBarIcon: ({ focused }) =>
             <Ionicons
               name={focused ? "home" : "home-outline"}
-              color={focused ? (colorScheme === 'light' ? COLORS.greenDark : COLORS.grayDark) : (colorScheme == 'light' ? COLORS.greenLight : COLORS.black)}
+              color={focused ? (colorScheme === 'light' ? COLORS.greenDark : COLORS.lightWhite) : (colorScheme == 'light' ? COLORS.greenLight : COLORS.grayDark)}
               size={28}
             />,
           headerRight: () => (
@@ -63,13 +63,13 @@ export default function TabLayout() {
           title: 'Search',
           headerShown: false,
           tabBarLabel(props: { focused: boolean, children: string }) {
-            return <Text style={{ color: props.focused ? (colorScheme === 'light' ? COLORS.greenDark : COLORS.grayDark) : (colorScheme == 'light' ? COLORS.white : COLORS.blackLight), fontFamily: FONT.medium }}>{props.children}</Text>
+            return <Text style={{ color: props.focused ? (colorScheme === 'light' ? COLORS.greenDark : COLORS.lightWhite) : (colorScheme == 'light' ? COLORS.white : COLORS.blackLight), fontFamily: FONT.medium }}>{props.children}</Text>
           },
           tabBarIcon: ({ focused }) =>
             <Ionicons
               name={focused ? "search" : "search-outline"}
-              color={focused ? (colorScheme === 'light' ? COLORS.greenDark : COLORS.grayDark) : (colorScheme == 'light' ? COLORS.greenLight : COLORS.black)}
-              size={30}
+              color={focused ? (colorScheme === 'light' ? COLORS.greenDark : COLORS.lightWhite) : (colorScheme == 'light' ? COLORS.greenLight : COLORS.grayDark)}
+              size={35}
             />
 
 
@@ -82,9 +82,9 @@ export default function TabLayout() {
           title: 'Favorites',
           headerShown: false,
           tabBarLabel(props: { focused: boolean, children: string }) {
-            return <Text style={{ color: props.focused ? (colorScheme === 'light' ? COLORS.greenDark : COLORS.grayDark) : (colorScheme == 'light' ? COLORS.white : COLORS.blackLight), fontFamily: FONT.medium }}>{props.children}</Text>
+            return <Text style={{ color: props.focused ? (colorScheme === 'light' ? COLORS.greenDark : COLORS.lightWhite) : (colorScheme == 'light' ? COLORS.white : COLORS.blackLight), fontFamily: FONT.medium }}>{props.children}</Text>
           },
-          tabBarIcon: ({ focused }) => <TabBarIcon name={focused ? "heart" : "heart-o"} color={focused ? (colorScheme === 'light' ? COLORS.greenDark : COLORS.grayDark) : (colorScheme == 'light' ? COLORS.greenLight : COLORS.black)} />,
+          tabBarIcon: ({ focused }) => <TabBarIcon name={focused ? "heart" : "heart-o"} color={focused ? (colorScheme === 'light' ? COLORS.greenDark : COLORS.lightWhite) : (colorScheme == 'light' ? COLORS.greenLight : COLORS.grayDark)} />,
         }}
       />
 
@@ -93,9 +93,9 @@ export default function TabLayout() {
         options={{
           title: 'Profile',
           tabBarLabel(props: { focused: boolean, children: string }) {
-            return <Text style={{ color: props.focused ? (colorScheme === 'light' ? COLORS.greenDark : COLORS.grayDark) : (colorScheme == 'light' ? COLORS.white : COLORS.blackLight), fontFamily: FONT.medium }}>{props.children}</Text>
+            return <Text style={{ color: props.focused ? (colorScheme === 'light' ? COLORS.greenDark : COLORS.lightWhite) : (colorScheme == 'light' ? COLORS.white : COLORS.blackLight), fontFamily: FONT.medium }}>{props.children}</Text>
           },
-          tabBarIcon: ({ focused }) => <TabBarIcon name={focused ? "user" : "user-o"} color={focused ? (colorScheme === 'light' ? COLORS.greenDark : COLORS.grayDark) : (colorScheme == 'light' ? COLORS.greenLight : COLORS.black)} />,
+          tabBarIcon: ({ focused }) => <TabBarIcon name={focused ? "user" : "user-o"} color={focused ? (colorScheme === 'light' ? COLORS.greenDark : COLORS.lightWhite) : (colorScheme == 'light' ? COLORS.greenLight : COLORS.grayDark)} />,
         }}
       />
     </Tabs>

@@ -11,7 +11,7 @@ import styles from './button.style';
 const ApplyButton = ({ handleNavigate }) => {
 
   return (
-    <TouchableOpacity style={[styles.container, {flex: 0, width: 158}]} onPress={handleNavigate} activeOpacity={0.7}>
+    <TouchableOpacity style={[styles.container]} onPress={handleNavigate} activeOpacity={0.7}>
       <Text style={styles.nameApply}>
         Apply
       </Text>

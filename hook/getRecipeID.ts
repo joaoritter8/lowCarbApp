@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import axios from "axios";
-import { LikedContext } from '../contexts/liked';
+import { LikedContext } from '../contexts';
 
 import * as Device from 'expo-device';
 

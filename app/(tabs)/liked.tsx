@@ -8,12 +8,12 @@ import useFetch from '../../hook/useFetch';
 import getRecipeID from '../../hook/getRecipeID';
 import { LikedCard, InputText } from '../../components';
 import { IRecipe } from '../../interfaces/recipe';
-import { LikedContext } from '../../contexts/liked';
+import { Context } from '../../contexts';
 
 export default function TabTwoScreen() {
 
   
-  const {likedPress, recipes} = useContext(LikedContext); 
+  const {likedPress, recipes} = useContext(Context); 
 
   const [isLoading, setIsLoading] = useState(false);
 
